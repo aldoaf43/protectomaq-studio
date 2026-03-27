@@ -15,10 +15,13 @@
     "sanity"
   ],
   "dependencies": {
-    "@sanity/vision": "^5.17.1",
+    "@sanity/icons": "^3.7.4",
+    "@sanity/vision": "^5.18.0",
+    "lucide-react": "^0.577.0",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
-    "sanity": "^5.17.1",
+    "sanity": "^5.18.0",
+    "sanity-plugin-lucide-icon-picker": "^1.0.3",
     "styled-components": "^6.1.18"
   },
   "devDependencies": {
