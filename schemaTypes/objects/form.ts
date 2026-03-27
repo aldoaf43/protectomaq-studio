@@ -7,59 +7,8 @@ export default defineType({
   fields: [
     defineField({
       name: 'formTitle',
-      title: 'Título del Formulario',
+      title: 'Título del Formulario (opcional)',
       type: 'string',
-    }),
-    defineField({
-      name: 'formDescription',
-      title: 'Descripción del Formulario',
-      type: 'text',
-      rows: 2,
-    }),
-    defineField({
-      name: 'formCta',
-      title: 'Botón de acción del Formulario',
-      type: 'cta',
-      options: {
-        collapsible: true,
-        collapsed: true,
-      },
-    }),
-    defineField({
-      name: 'responseMessage',
-      title: 'Mensaje de respuesta exitoso',
-      type: 'object',
-      fields: [
-        defineField({
-          name: 'title',
-          title: 'Título del mensaje',
-          type: 'string',
-        }),
-        defineField({
-          name: 'description',
-          title: 'Descripción del mensaje',
-          type: 'text',
-          rows: 2,
-        }),
-      ],
-    }),
-    defineField({
-      name: 'responseErrorMessage',
-      title: 'Mensaje de respuesta de error',
-      type: 'object',
-      fields: [
-        defineField({
-          name: 'title',
-          title: 'Título del mensaje de error',
-          type: 'string',
-        }),
-        defineField({
-          name: 'description',
-          title: 'Descripción del mensaje de error',
-          type: 'text',
-          rows: 2,
-        }),
-      ],
     }),
     defineField({
       name: 'formFields',
@@ -71,8 +20,13 @@ export default defineType({
           name: 'formField',
           fields: [
             defineField({
+              name: 'name',
+              title: 'Nombre del campo',
+              type: 'string',
+            }),
+            defineField({
               name: 'label',
-              title: 'Etiqueta',
+              title: 'Etiqueta (label) del campo',
               type: 'string',
             }),
             defineField({
@@ -101,11 +55,64 @@ export default defineType({
           ],
           preview: {
             select: {
-              title: 'label',
+              title: 'name',
               subtitle: 'type',
             },
           },
         },
+      ],
+    }),
+    defineField({
+      name: 'formCta',
+      title: 'Botón de acción del Formulario',
+      type: 'cta',
+      options: {
+        collapsible: true,
+        collapsed: true,
+      },
+    }),
+    defineField({
+      name: 'responseMessage',
+      title: 'Mensaje de respuesta exitoso',
+      type: 'object',
+      options: {
+        collapsible: true,
+        collapsed: true,
+      },
+      fields: [
+        defineField({
+          name: 'title',
+          title: 'Título del mensaje',
+          type: 'string',
+        }),
+        defineField({
+          name: 'description',
+          title: 'Descripción del mensaje',
+          type: 'text',
+          rows: 2,
+        }),
+      ],
+    }),
+    defineField({
+      name: 'responseErrorMessage',
+      title: 'Mensaje de respuesta de error',
+      type: 'object',
+      options: {
+        collapsible: true,
+        collapsed: true,
+      },
+      fields: [
+        defineField({
+          name: 'title',
+          title: 'Título del mensaje de error',
+          type: 'string',
+        }),
+        defineField({
+          name: 'description',
+          title: 'Descripción del mensaje de error',
+          type: 'text',
+          rows: 2,
+        }),
       ],
     }),
   ],

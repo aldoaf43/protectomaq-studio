@@ -3,22 +3,22 @@ import {EnvelopeIcon} from '@sanity/icons'
 
 export default defineType({
   name: 'leadMagnet',
-  title: 'Lead Magnet Section',
+  title: 'Sección Lead Magnet',
   type: 'object',
   icon: EnvelopeIcon,
   fields: [
     defineField({
       name: 'title',
-      title: 'Title',
+      title: 'Título',
       type: 'string',
-      description: 'The primary headline for the conversion section.',
+      description: 'El titular principal de la sección de conversión.',
       validation: (Rule) => Rule.required(),
     }),
     defineField({
       name: 'subtitle',
-      title: 'Subtitle',
+      title: 'Subtítulo',
       type: 'string',
-      description: 'Supporting text below the headline.',
+      description: 'Texto de apoyo debajo del titular.',
     }),
   ],
 })

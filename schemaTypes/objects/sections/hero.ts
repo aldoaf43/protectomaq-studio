@@ -3,34 +3,34 @@ import { StarIcon } from '@sanity/icons'
 
 export default defineType({
   name: 'hero',
-  title: 'Hero Section',
+  title: 'Sección Hero',
   type: 'object',
   icon: StarIcon,
   fields: [
     defineField({
       name: 'label',
-      title: 'Section Label',
+      title: 'Etiqueta de la Sección',
       type: 'string',
-      description: 'Small text above the main title (e.g., "Industrial Solutions")',
+      description: 'Texto pequeño sobre el título principal (ej: "Soluciones Industriales")',
     }),
     defineField({
       name: 'title',
-      title: 'Main Title',
+      title: 'Título Principal',
       type: 'string',
-      description: 'Primary headline for the landing page.',
+      description: 'Titular principal de la página de destino.',
       validation: (Rule) => Rule.required(),
     }),
     defineField({
       name: 'description',
-      title: 'Description',
+      title: 'Descripción',
       type: 'text',
-      description: 'Supporting text below the main headline.',
+      description: 'Texto de apoyo debajo del titular principal.',
     }),
     defineField({
       name: 'primaryCta',
-      title: 'Primary CTA Text',
+      title: 'Texto del CTA Primario',
       type: 'cta',
-      description: 'Main button.',
+      description: 'Botón principal.',
       options: {
         collapsible: true,
         collapsed: true,
@@ -38,9 +38,9 @@ export default defineType({
     }),
     defineField({
       name: 'secondaryCta',
-      title: 'Secondary CTA Text',
+      title: 'Texto del CTA Secundario',
       type: 'cta',
-      description: 'Text for the secondary button.',
+      description: 'Texto para el botón secundario.',
       options: {
         collapsible: true,
         collapsed: true,
@@ -48,14 +48,14 @@ export default defineType({
     }),
     defineField({
       name: 'image',
-      title: 'Hero Image',
+      title: 'Imagen Hero',
       type: 'image',
       options: { hotspot: true },
-      description: 'High-quality industrial visual.',
+      description: 'Imagen visual industrial de alta calidad.',
     }),
     defineField({
       name: 'insuranceBrands',
-      title: 'Insurance Brands',
+      title: 'Marcas de Aseguradoras',
       type: 'array',
       of: [
         {

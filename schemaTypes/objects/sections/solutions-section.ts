@@ -3,28 +3,28 @@ import {CaseIcon} from '@sanity/icons'
 
 export default defineType({
   name: 'solutionsSection',
-  title: 'Solutions Section',
+  title: 'Sección de Soluciones',
   type: 'object',
   icon: CaseIcon,
   fields: [
     defineField({
       name: 'label',
-      title: 'Section Label',
+      title: 'Etiqueta de la Sección',
       type: 'string',
-      description: 'Small text above the section title.',
+      description: 'Texto pequeño sobre el título de la sección.',
     }),
     defineField({
       name: 'title',
-      title: 'Section Title',
+      title: 'Título de la Sección',
       type: 'string',
-      description: 'The main headline for the solutions area.',
+      description: 'El titular principal del área de soluciones.',
       validation: (Rule) => Rule.required(),
     }),
     defineField({
       name: 'solutions',
-      title: 'Solutions Selection',
+      title: 'Selección de Soluciones',
       type: 'array',
-      description: 'Select the solutions to showcase in this section.',
+      description: 'Selecciona las soluciones a mostrar en esta sección.',
       of: [{type: 'solution'}],
       validation: (Rule) => Rule.required().min(1),
     }),

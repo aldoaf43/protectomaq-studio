@@ -11,17 +11,17 @@ export default defineType({
   fields: [
     defineField({
       name: 'metaTitle',
-      title: 'Meta Title',
+      title: 'Meta Título',
       type: 'string',
-      description: 'The title shown in search engine results (max 80 chars)',
-      validation: (Rule) => Rule.max(80).warning('Keep it under 80 characters for best SEO'),
+      description: 'El título que se muestra en los resultados de los motores de búsqueda (máx. 80 caracteres)',
+      validation: (Rule) => Rule.max(80).warning('Manténgalo por debajo de 80 caracteres para un mejor SEO'),
     }),
     defineField({
       name: 'metaDescription',
-      title: 'Meta Description',
+      title: 'Meta Descripción',
       type: 'text',
-      description: 'The summary shown in search engine results (max 160 chars)',
-      validation: (Rule) => Rule.max(160).warning('Keep it under 160 characters for best SEO'),
+      description: 'El resumen que se muestra en los resultados de los motores de búsqueda (máx. 160 caracteres)',
+      validation: (Rule) => Rule.max(160).warning('Manténgalo por debajo de 160 caracteres para un mejor SEO'),
     }),
   ],
 })

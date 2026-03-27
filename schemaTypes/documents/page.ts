@@ -30,7 +30,7 @@ export default defineType({
     }),
     defineField({
       name: 'formDialog',
-      title: 'Formulario (popup)',
+      title: 'Formulario',
       type: 'form',
       options: {
         collapsible: true,
@@ -39,9 +39,9 @@ export default defineType({
     }),
     defineField({
       name: 'sections',
-      title: 'Page Sections',
+      title: 'Secciones de la Página',
       type: 'array',
-      description: 'Add and arrange sections to build your landing page.',
+      description: 'Añade y organiza las secciones para construir tu página de destino.',
       of: [
         defineArrayMember({ type: 'hero' }),
         defineArrayMember({ type: 'solutionsSection' }),

@@ -3,35 +3,35 @@ import { ComponentIcon } from '@sanity/icons'
 
 export default defineType({
   name: 'solution',
-  title: 'Solution',
+  title: 'Solución',
   type: 'object',
   icon: ComponentIcon,
   fields: [
     defineField({
       name: 'title',
-      title: 'Title',
+      title: 'Título',
       type: 'string',
-      description: 'The name of the solution.',
+      description: 'El nombre de la solución.',
       validation: (Rule) => Rule.required(),
     }),
     defineField({
       name: 'icon',
-      title: 'Icon',
+      title: 'Icono',
       type: 'lucide-icon',
-      description: 'Select an icon that represents this solution.',
+      description: 'Selecciona un icono que represente esta solución.',
     }),
     defineField({
       name: 'description',
-      title: 'Description',
+      title: 'Descripción',
       type: 'text',
-      description: 'A detailed explanation of the solution.',
+      description: 'Una explicación detallada de la solución.',
       validation: (Rule) => Rule.required(),
     }),
     defineField({
       name: 'stats',
-      title: 'Stats',
+      title: 'Estadísticas / Destacado',
       type: 'string',
-      description: 'Key performance metric or highlight (e.g., "99% Efficiency").',
+      description: 'Métrica de rendimiento clave o texto destacado (ej: "99% de Eficiencia").',
     }),
   ],
 })

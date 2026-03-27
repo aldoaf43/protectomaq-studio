@@ -26,6 +26,7 @@ export default defineType({
         list: [
           {title: 'Primario', value: 'default'},
           {title: 'Secundario', value: 'outline'},
+          {title: 'Obscuro', value: 'dark'},
           {title: 'Borde primario', value: 'primaryOutline'},
           {title: 'Transparente', value: 'ghost'},
           {title: 'Rojo', value: 'destructive'},
